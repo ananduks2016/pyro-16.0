@@ -196,7 +196,7 @@ class Dispatcher:
                                 continue
 
                             try:
-                                await handler.callback(self.client, *args)
+                                handler.callback(self.client, *args)
                             except pyrogram.StopPropagation:
                                 raise
                             except pyrogram.ContinuePropagation:
